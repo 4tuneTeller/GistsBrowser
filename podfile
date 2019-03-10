@@ -1,0 +1,3 @@
+target 'GistsBrowser' do
+	pod 'Alamofire', '4.8.1'
+end

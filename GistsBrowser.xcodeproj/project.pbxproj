@@ -7,21 +7,51 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F81B0CC113A392282C06DAF /* libPods-GistsBrowser.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E16C11B0E21F8B7FAE313BD0 /* libPods-GistsBrowser.a */; };
 		3B06C5EB2220597600E16B8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B06C5EA2220597600E16B8B /* AppDelegate.swift */; };
-		3B06C5ED2220597600E16B8B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B06C5EC2220597600E16B8B /* ViewController.swift */; };
+		3B06C5ED2220597600E16B8B /* GistsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B06C5EC2220597600E16B8B /* GistsListViewController.swift */; };
 		3B06C5F02220597600E16B8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B06C5EE2220597600E16B8B /* Main.storyboard */; };
 		3B06C5F22220597900E16B8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B06C5F12220597900E16B8B /* Assets.xcassets */; };
 		3B06C5F52220597900E16B8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B06C5F32220597900E16B8B /* LaunchScreen.storyboard */; };
+		3B06C5FD22205AE700E16B8B /* GistDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B06C5FC22205AE700E16B8B /* GistDetailsViewController.swift */; };
+		3BABF0F5222164990056D37A /* GistListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BABF0F3222164990056D37A /* GistListTableViewCell.swift */; };
+		3BABF0F6222164990056D37A /* GistListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BABF0F4222164990056D37A /* GistListTableViewCell.xib */; };
+		3BABF0F8222196060056D37A /* GistsListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BABF0F7222196060056D37A /* GistsListService.swift */; };
+		3BABF0FB222197D80056D37A /* Gist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BABF0FA222197D80056D37A /* Gist.swift */; };
+		3BDCAFE5222C1598005E5F55 /* GistsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDCAFE4222C1598005E5F55 /* GistsListPresenter.swift */; };
+		3BDCAFE7222C15AE005E5F55 /* GistsListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDCAFE6222C15AE005E5F55 /* GistsListInteractor.swift */; };
+		3BDCAFE9222C491D005E5F55 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDCAFE8222C491D005E5F55 /* NetworkService.swift */; };
+		3BDCAFEB222C67F2005E5F55 /* GistsListConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDCAFEA222C67F2005E5F55 /* GistsListConfigurator.swift */; };
+		3BDCAFF0222C7747005E5F55 /* GistDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDCAFEF222C7747005E5F55 /* GistDetailsPresenter.swift */; };
+		3BDCAFF2222C7753005E5F55 /* GistDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDCAFF1222C7753005E5F55 /* GistDetailsInteractor.swift */; };
+		3BDCAFF4222C776A005E5F55 /* GistDetailsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDCAFF3222C776A005E5F55 /* GistDetailsConfigurator.swift */; };
+		3BDCAFF6222C7EE8005E5F55 /* GistsListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDCAFF5222C7EE8005E5F55 /* GistsListRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3B06C5E72220597600E16B8B /* GistsBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GistsBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B06C5EA2220597600E16B8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3B06C5EC2220597600E16B8B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3B06C5EC2220597600E16B8B /* GistsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistsListViewController.swift; sourceTree = "<group>"; };
 		3B06C5EF2220597600E16B8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3B06C5F12220597900E16B8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B06C5F42220597900E16B8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B06C5F62220597900E16B8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B06C5FC22205AE700E16B8B /* GistDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistDetailsViewController.swift; sourceTree = "<group>"; };
+		3BABF0F3222164990056D37A /* GistListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistListTableViewCell.swift; sourceTree = "<group>"; };
+		3BABF0F4222164990056D37A /* GistListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GistListTableViewCell.xib; sourceTree = "<group>"; };
+		3BABF0F7222196060056D37A /* GistsListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistsListService.swift; sourceTree = "<group>"; };
+		3BABF0FA222197D80056D37A /* Gist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gist.swift; sourceTree = "<group>"; };
+		3BDCAFE4222C1598005E5F55 /* GistsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistsListPresenter.swift; sourceTree = "<group>"; };
+		3BDCAFE6222C15AE005E5F55 /* GistsListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistsListInteractor.swift; sourceTree = "<group>"; };
+		3BDCAFE8222C491D005E5F55 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		3BDCAFEA222C67F2005E5F55 /* GistsListConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistsListConfigurator.swift; sourceTree = "<group>"; };
+		3BDCAFEF222C7747005E5F55 /* GistDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistDetailsPresenter.swift; sourceTree = "<group>"; };
+		3BDCAFF1222C7753005E5F55 /* GistDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistDetailsInteractor.swift; sourceTree = "<group>"; };
+		3BDCAFF3222C776A005E5F55 /* GistDetailsConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistDetailsConfigurator.swift; sourceTree = "<group>"; };
+		3BDCAFF5222C7EE8005E5F55 /* GistsListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistsListRouter.swift; sourceTree = "<group>"; };
+		4D65F3FFA0078C27789BD5F1 /* Pods-GistsBrowser.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GistsBrowser.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GistsBrowser/Pods-GistsBrowser.debug.xcconfig"; sourceTree = "<group>"; };
+		6A21C2DD9AE6600598D65E60 /* Pods-GistsBrowser.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GistsBrowser.release.xcconfig"; path = "Pods/Target Support Files/Pods-GistsBrowser/Pods-GistsBrowser.release.xcconfig"; sourceTree = "<group>"; };
+		E16C11B0E21F8B7FAE313BD0 /* libPods-GistsBrowser.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GistsBrowser.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F81B0CC113A392282C06DAF /* libPods-GistsBrowser.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +71,8 @@
 			children = (
 				3B06C5E92220597600E16B8B /* GistsBrowser */,
 				3B06C5E82220597600E16B8B /* Products */,
+				DFDDE6C3D8DD8C7E2C403FDF /* Pods */,
+				CBA6A3816387365FAB5C2C0E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +87,92 @@
 		3B06C5E92220597600E16B8B /* GistsBrowser */ = {
 			isa = PBXGroup;
 			children = (
+				3BABF0F9222197C60056D37A /* entities */,
+				3BABF0F12221620A0056D37A /* services */,
 				3B06C5EA2220597600E16B8B /* AppDelegate.swift */,
-				3B06C5EC2220597600E16B8B /* ViewController.swift */,
-				3B06C5EE2220597600E16B8B /* Main.storyboard */,
+				3BABF0F0222161F60056D37A /* ui */,
 				3B06C5F12220597900E16B8B /* Assets.xcassets */,
 				3B06C5F32220597900E16B8B /* LaunchScreen.storyboard */,
 				3B06C5F62220597900E16B8B /* Info.plist */,
 			);
 			path = GistsBrowser;
+			sourceTree = "<group>";
+		};
+		3BABF0F0222161F60056D37A /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				3BDCAFEC222C7709005E5F55 /* GistDetails */,
+				3BDCAFE3222C157B005E5F55 /* GistsList */,
+				3B06C5EE2220597600E16B8B /* Main.storyboard */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		3BABF0F12221620A0056D37A /* services */ = {
+			isa = PBXGroup;
+			children = (
+				3BABF0F7222196060056D37A /* GistsListService.swift */,
+				3BDCAFE8222C491D005E5F55 /* NetworkService.swift */,
+			);
+			path = services;
+			sourceTree = "<group>";
+		};
+		3BABF0F2222164580056D37A /* gistListTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				3BABF0F3222164990056D37A /* GistListTableViewCell.swift */,
+				3BABF0F4222164990056D37A /* GistListTableViewCell.xib */,
+			);
+			path = gistListTableViewCell;
+			sourceTree = "<group>";
+		};
+		3BABF0F9222197C60056D37A /* entities */ = {
+			isa = PBXGroup;
+			children = (
+				3BABF0FA222197D80056D37A /* Gist.swift */,
+			);
+			path = entities;
+			sourceTree = "<group>";
+		};
+		3BDCAFE3222C157B005E5F55 /* GistsList */ = {
+			isa = PBXGroup;
+			children = (
+				3BABF0F2222164580056D37A /* gistListTableViewCell */,
+				3B06C5EC2220597600E16B8B /* GistsListViewController.swift */,
+				3BDCAFE4222C1598005E5F55 /* GistsListPresenter.swift */,
+				3BDCAFE6222C15AE005E5F55 /* GistsListInteractor.swift */,
+				3BDCAFEA222C67F2005E5F55 /* GistsListConfigurator.swift */,
+				3BDCAFF5222C7EE8005E5F55 /* GistsListRouter.swift */,
+			);
+			path = GistsList;
+			sourceTree = "<group>";
+		};
+		3BDCAFEC222C7709005E5F55 /* GistDetails */ = {
+			isa = PBXGroup;
+			children = (
+				3B06C5FC22205AE700E16B8B /* GistDetailsViewController.swift */,
+				3BDCAFEF222C7747005E5F55 /* GistDetailsPresenter.swift */,
+				3BDCAFF1222C7753005E5F55 /* GistDetailsInteractor.swift */,
+				3BDCAFF3222C776A005E5F55 /* GistDetailsConfigurator.swift */,
+			);
+			path = GistDetails;
+			sourceTree = "<group>";
+		};
+		CBA6A3816387365FAB5C2C0E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E16C11B0E21F8B7FAE313BD0 /* libPods-GistsBrowser.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DFDDE6C3D8DD8C7E2C403FDF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4D65F3FFA0078C27789BD5F1 /* Pods-GistsBrowser.debug.xcconfig */,
+				6A21C2DD9AE6600598D65E60 /* Pods-GistsBrowser.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,6 +182,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3B06C5F92220597900E16B8B /* Build configuration list for PBXNativeTarget "GistsBrowser" */;
 			buildPhases = (
+				749144630E36C153CF024249 /* [CP] Check Pods Manifest.lock */,
 				3B06C5E32220597600E16B8B /* Sources */,
 				3B06C5E42220597600E16B8B /* Frameworks */,
 				3B06C5E52220597600E16B8B /* Resources */,
@@ -122,6 +234,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BABF0F6222164990056D37A /* GistListTableViewCell.xib in Resources */,
 				3B06C5F52220597900E16B8B /* LaunchScreen.storyboard in Resources */,
 				3B06C5F22220597900E16B8B /* Assets.xcassets in Resources */,
 				3B06C5F02220597600E16B8B /* Main.storyboard in Resources */,
@@ -130,12 +243,49 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		749144630E36C153CF024249 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GistsBrowser-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3B06C5E32220597600E16B8B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B06C5ED2220597600E16B8B /* ViewController.swift in Sources */,
+				3BABF0F5222164990056D37A /* GistListTableViewCell.swift in Sources */,
+				3BDCAFF6222C7EE8005E5F55 /* GistsListRouter.swift in Sources */,
+				3B06C5FD22205AE700E16B8B /* GistDetailsViewController.swift in Sources */,
+				3BDCAFE5222C1598005E5F55 /* GistsListPresenter.swift in Sources */,
+				3BABF0FB222197D80056D37A /* Gist.swift in Sources */,
+				3BDCAFF2222C7753005E5F55 /* GistDetailsInteractor.swift in Sources */,
+				3BDCAFE9222C491D005E5F55 /* NetworkService.swift in Sources */,
+				3BDCAFF0222C7747005E5F55 /* GistDetailsPresenter.swift in Sources */,
+				3BDCAFEB222C67F2005E5F55 /* GistsListConfigurator.swift in Sources */,
+				3B06C5ED2220597600E16B8B /* GistsListViewController.swift in Sources */,
+				3BDCAFF4222C776A005E5F55 /* GistDetailsConfigurator.swift in Sources */,
+				3BDCAFE7222C15AE005E5F55 /* GistsListInteractor.swift in Sources */,
+				3BABF0F8222196060056D37A /* GistsListService.swift in Sources */,
 				3B06C5EB2220597600E16B8B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,10 +430,11 @@
 		};
 		3B06C5FA2220597900E16B8B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D65F3FFA0078C27789BD5F1 /* Pods-GistsBrowser.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WRS8EV33U6;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = GistsBrowser/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -298,10 +449,11 @@
 		};
 		3B06C5FB2220597900E16B8B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A21C2DD9AE6600598D65E60 /* Pods-GistsBrowser.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WRS8EV33U6;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = GistsBrowser/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
