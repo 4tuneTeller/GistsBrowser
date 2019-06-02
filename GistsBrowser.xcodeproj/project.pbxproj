@@ -14,6 +14,8 @@
 		3B06C5F22220597900E16B8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B06C5F12220597900E16B8B /* Assets.xcassets */; };
 		3B06C5F52220597900E16B8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B06C5F32220597900E16B8B /* LaunchScreen.storyboard */; };
 		3B06C5FD22205AE700E16B8B /* GistDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B06C5FC22205AE700E16B8B /* GistDetailsViewController.swift */; };
+		3B2C5AB9223E23D800F58CF3 /* HasMoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2C5AB7223E23D800F58CF3 /* HasMoreTableViewCell.swift */; };
+		3B2C5ABA223E23D800F58CF3 /* HasMoreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B2C5AB8223E23D800F58CF3 /* HasMoreTableViewCell.xib */; };
 		3BABF0F5222164990056D37A /* GistListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BABF0F3222164990056D37A /* GistListTableViewCell.swift */; };
 		3BABF0F6222164990056D37A /* GistListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BABF0F4222164990056D37A /* GistListTableViewCell.xib */; };
 		3BABF0F8222196060056D37A /* GistsListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BABF0F7222196060056D37A /* GistsListService.swift */; };
@@ -37,6 +39,8 @@
 		3B06C5F42220597900E16B8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B06C5F62220597900E16B8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B06C5FC22205AE700E16B8B /* GistDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistDetailsViewController.swift; sourceTree = "<group>"; };
+		3B2C5AB7223E23D800F58CF3 /* HasMoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasMoreTableViewCell.swift; sourceTree = "<group>"; };
+		3B2C5AB8223E23D800F58CF3 /* HasMoreTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HasMoreTableViewCell.xib; sourceTree = "<group>"; };
 		3BABF0F3222164990056D37A /* GistListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistListTableViewCell.swift; sourceTree = "<group>"; };
 		3BABF0F4222164990056D37A /* GistListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GistListTableViewCell.xib; sourceTree = "<group>"; };
 		3BABF0F7222196060056D37A /* GistsListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistsListService.swift; sourceTree = "<group>"; };
@@ -98,6 +102,15 @@
 			path = GistsBrowser;
 			sourceTree = "<group>";
 		};
+		3B2C5AB4223E239900F58CF3 /* hasMoreTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				3B2C5AB7223E23D800F58CF3 /* HasMoreTableViewCell.swift */,
+				3B2C5AB8223E23D800F58CF3 /* HasMoreTableViewCell.xib */,
+			);
+			path = hasMoreTableViewCell;
+			sourceTree = "<group>";
+		};
 		3BABF0F0222161F60056D37A /* ui */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +150,7 @@
 		3BDCAFE3222C157B005E5F55 /* GistsList */ = {
 			isa = PBXGroup;
 			children = (
+				3B2C5AB4223E239900F58CF3 /* hasMoreTableViewCell */,
 				3BABF0F2222164580056D37A /* gistListTableViewCell */,
 				3B06C5EC2220597600E16B8B /* GistsListViewController.swift */,
 				3BDCAFE4222C1598005E5F55 /* GistsListPresenter.swift */,
@@ -237,6 +251,7 @@
 				3BABF0F6222164990056D37A /* GistListTableViewCell.xib in Resources */,
 				3B06C5F52220597900E16B8B /* LaunchScreen.storyboard in Resources */,
 				3B06C5F22220597900E16B8B /* Assets.xcassets in Resources */,
+				3B2C5ABA223E23D800F58CF3 /* HasMoreTableViewCell.xib in Resources */,
 				3B06C5F02220597600E16B8B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BABF0F5222164990056D37A /* GistListTableViewCell.swift in Sources */,
+				3B2C5AB9223E23D800F58CF3 /* HasMoreTableViewCell.swift in Sources */,
 				3BDCAFF6222C7EE8005E5F55 /* GistsListRouter.swift in Sources */,
 				3B06C5FD22205AE700E16B8B /* GistDetailsViewController.swift in Sources */,
 				3BDCAFE5222C1598005E5F55 /* GistsListPresenter.swift in Sources */,

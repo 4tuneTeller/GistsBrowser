@@ -15,6 +15,8 @@ protocol GistsListPresenter: class {
 	func gistsCount() -> Int
 	func cellSelectedAt(indexPath: IndexPath)
 	func getCellDataBy(indexPath: IndexPath) -> CellData?
+	func willDisplayRow(at indexPath: IndexPath)
+	func hasGist(at indexPath: IndexPath) -> Bool
 	func updateData(_ data: Data, for url: URL)
 }
 
@@ -37,7 +39,12 @@ class GistsListPresenterImpl: GistsListPresenter {
 	}
 	
 	func cellSelectedAt(indexPath: IndexPath) {
-		guard let selectedGist = gistsList?[indexPath.row] else { return }
+		guard
+			hasGist(at: indexPath),
+			let selectedGist = gistsList?[indexPath.row]
+		else {
+			return
+		}
 		router.openDetailsOf(gist: selectedGist)
 	}
 	
@@ -71,6 +78,18 @@ class GistsListPresenterImpl: GistsListPresenter {
 		return gistsList?.count ?? 0
 	}
 	
+	func willDisplayRow(at indexPath: IndexPath) {
+		guard !hasGist(at: indexPath) && gistsCount() > 0 else {
+			return
+		}
+		getNextPage()
+	}
+	
+	func hasGist(at indexPath: IndexPath) -> Bool {
+		return indexPath.row < gistsCount()
+	}
+	
+	// TODO: move to interactor
 	private func getNextPage() {
 		GistsListService.shared.getGists(page: currentPage) { retrievedGists in
 			guard let retrievedGists = retrievedGists else { return }
@@ -84,6 +103,23 @@ class GistsListPresenterImpl: GistsListPresenter {
 			self.view?.reloadData()
 			self.currentPage += 1
 		}
+	}
+	
+	func getGists(at page: Int, callback: ([Gist])->()) {
+		
+		GistsListService.shared.getGists(page: page) { retrievedGists in
+			guard let retrievedGists = retrievedGists else { return }
+			
+			if self.gistsList == nil {
+				self.gistsList = retrievedGists
+			} else {
+				self.gistsList?.append(contentsOf: retrievedGists)
+			}
+			
+			self.view?.reloadData()
+			self.currentPage += 1
+		}
+		
 	}
 	
 }

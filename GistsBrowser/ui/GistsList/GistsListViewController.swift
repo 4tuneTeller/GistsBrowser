@@ -32,15 +32,22 @@ class GistsListViewControllerImpl: UITableViewController, GistsListViewControlle
 		self.tableView.dataSource = self
 		
 		self.tableView.register(UINib(nibName: GistListTableViewCell.nibName, bundle: nil), forCellReuseIdentifier: GistListTableViewCell.reuseId)
+		self.tableView.register(UINib(nibName: HasMoreTableViewCell.nibName, bundle: nil), forCellReuseIdentifier: HasMoreTableViewCell.reuseId)
 		
 		self.presenter.configView()
 	}
 	
 	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return self.presenter.gistsCount()
+		return self.presenter.gistsCount() + 1
 	}
 
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		
+		guard self.presenter.hasGist(at: indexPath) else {
+			let cell = tableView.dequeueReusableCell(withIdentifier: HasMoreTableViewCell.reuseId)
+			return cell ?? UITableViewCell()
+		}
+		
 		guard
 			let cell = tableView.dequeueReusableCell(withIdentifier: GistListTableViewCell.reuseId) as? GistListTableViewCell,
 			let cellData = presenter.getCellDataBy(indexPath: indexPath)
@@ -60,6 +67,14 @@ class GistsListViewControllerImpl: UITableViewController, GistsListViewControlle
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		tableView.deselectRow(at: indexPath, animated: true)
 		presenter.cellSelectedAt(indexPath: indexPath)
+	}
+	
+	override func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
+		return self.presenter.hasGist(at: indexPath)
+	}
+	
+	override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+		self.presenter.willDisplayRow(at: indexPath)
 	}
 	
 	func reloadData() {
