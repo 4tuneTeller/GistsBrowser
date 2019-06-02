@@ -28,7 +28,7 @@ class GistsListPresenterImpl: GistsListPresenter {
 	var router: GistsListRouter!
 	
 	private var gistsList: [Gist]?
-	private var currentPage = 0
+	private var currentPage = 1
 	
 	init(view: GistsListViewController) {
 		self.view = view
