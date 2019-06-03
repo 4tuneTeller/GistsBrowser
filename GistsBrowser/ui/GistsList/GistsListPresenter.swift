@@ -28,7 +28,8 @@ class GistsListPresenterImpl: GistsListPresenter {
 	var router: GistsListRouter!
 	
 	private var gistsList: [Gist]?
-	private var currentPage = 1
+	private var currentPage = 0
+	private var nextPageReceived = true
 	
 	init(view: GistsListViewController) {
 		self.view = view
@@ -89,26 +90,17 @@ class GistsListPresenterImpl: GistsListPresenter {
 		return indexPath.row < gistsCount()
 	}
 	
-	// TODO: move to interactor
 	private func getNextPage() {
-		GistsListService.shared.getGists(page: currentPage) { retrievedGists in
-			guard let retrievedGists = retrievedGists else { return }
-			
-			if self.gistsList == nil {
-				self.gistsList = retrievedGists
-			} else {
-				self.gistsList?.append(contentsOf: retrievedGists)
-			}
-			
-			self.view?.reloadData()
-			self.currentPage += 1
-		}
-	}
-	
-	func getGists(at page: Int, callback: ([Gist])->()) {
 		
-		GistsListService.shared.getGists(page: page) { retrievedGists in
-			guard let retrievedGists = retrievedGists else { return }
+		guard nextPageReceived else { return }
+		
+		nextPageReceived = false
+		currentPage += 1
+		
+		interactor.getGists(at: currentPage) { newGists in
+			self.nextPageReceived = true
+			
+			guard let retrievedGists = newGists else { return }
 			
 			if self.gistsList == nil {
 				self.gistsList = retrievedGists
@@ -117,7 +109,6 @@ class GistsListPresenterImpl: GistsListPresenter {
 			}
 			
 			self.view?.reloadData()
-			self.currentPage += 1
 		}
 		
 	}

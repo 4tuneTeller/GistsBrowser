@@ -10,6 +10,7 @@ import Foundation
 
 protocol GistsListInteractor {
 	func getImageDataBy(url: URL) -> Data?
+	func getGists(at page: Int, callback: @escaping ([Gist]?)->())
 }
 
 class GistsListInteractorImpl: GistsListInteractor {
@@ -35,6 +36,14 @@ class GistsListInteractorImpl: GistsListInteractor {
 		}
 		
 		return nil
+		
+	}
+	
+	func getGists(at page: Int, callback: @escaping ([Gist]?)->()) {
+		
+		GistsListService.shared.getGists(page: page) { retrievedGists in
+			callback(retrievedGists)
+		}
 		
 	}
 	
